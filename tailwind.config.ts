@@ -17,7 +17,8 @@ const config: Config = {
     colors:{
       'white': '#F3F7EC',
       'azul':  '#1A2130',
-      'black': '#121212'
+      'black': '#121212',
+      'gold': '#C7A438'
     }
   },
   plugins: [],

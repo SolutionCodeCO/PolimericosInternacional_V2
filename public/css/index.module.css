@@ -1,5 +1,52 @@
-.header{
-    background-color: var(--white);
-    color: var(--dark_blue);
+.body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(26, 33, 48, 1) 100%);
+    color: var(--white);
     min-height: 100vh;
+}
+
+.header {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+.navegable {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navegable .icon {
+    font-size: 30px;
+    transition: .3s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.navegable button {
+    font-size: 20px;
+    padding: 5px 10px;
+    transition: .3s;
+    border-radius: 5px;
+
+
+    &:hover{
+        background-color: rgba(128, 128, 128, 0.171);
+    }
 }
