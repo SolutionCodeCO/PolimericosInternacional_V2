@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { outfit } from "@/config/fonts";
 import "./globals.css";
+import "../../public/js/main"
 
 
 export const metadata: Metadata = {

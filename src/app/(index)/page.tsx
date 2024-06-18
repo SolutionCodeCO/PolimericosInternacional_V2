@@ -1,12 +1,17 @@
 import Image from "next/image";
-import styles from '../../../public/css/index.module.css'
-import { Title } from "@/components";
+import { About, Contacto, Portada, Servicios, Testimonios, Title } from "@/components";
+import SliderBanderas from "@/components/index/SliderN2";
 
 
 export default function Home() {
   return (
-   <div className={styles.portada}>
-   
+   <div className="">
+    <Portada/>
+    <About />
+    <SliderBanderas />
+    <Servicios />
+    <Testimonios />
+    <Contacto />
    </div>
   );
 }

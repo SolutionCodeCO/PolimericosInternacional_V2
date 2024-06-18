@@ -5,15 +5,18 @@
 
 :root {
   --white: #F3F7EC;
-  --dark_blue:  #1A2130;
+  --dark_blue:#1A2130;
   --black: #121212;
   --gold: #C7A438;
 }
 
-
+*{
+  font-weight: lighter;
+}
 body {
   color: var(--white);
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(26,33,48,1) 100%);
+  min-height: 100vh;
 }
 
 @layer utilities {

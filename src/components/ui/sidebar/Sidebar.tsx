@@ -12,7 +12,7 @@ export const Sidebar = () => {
 
     return (
 
-        <div>
+        <div className="font-regular">
         {/* backgroud */}
            { isSideMenuOpen && (
                
@@ -48,7 +48,7 @@ export const Sidebar = () => {
             }>
 
                 <div className="flex justify-between items-center relative">
-                    <p className="absolute top-4 left-4 text-3xl">Menú</p>
+                    <p className="absolute top-4 left-4 text-3xl font-bold">Menú</p>
                     <IoCloseOutline size={40} className="absolute top-4 right-4 cursor-pointer" onClick={() => closeMenu()
                     } />
                 </div>
@@ -65,51 +65,51 @@ export const Sidebar = () => {
 
                 {/* demas opciones */}
                 <Link href="/" className="flex items-center mt-1 p-2 m-2 hover:bg-white hover:text-black rounded transition-all">
-                    <IoHomeOutline size={25} />
-                    <span className="ml-3 text-xm tracking-tight">Inicio</span>
+                    <IoHomeOutline size={20} />
+                    <span className="ml-3 font-regular text-xm tracking-tight">Inicio</span>
                 </Link>
 
                 <Link href="/courses" className="flex items-center mt-1 p-2 m-2 hover:bg-white hover:text-black rounded transition-all">
-                    <IoDesktopOutline size={25} />
-                    <span className="ml-3 text-xm tracking-tight">Cursos</span>
+                    <IoDesktopOutline size={20} />
+                    <span className="ml-3 font-regular text-xm tracking-tight">Cursos</span>
                 </Link>
 
                 <Link href="/" className="flex items-center mt-1 p-2 m-2 hover:bg-white hover:text-black rounded transition-all">
-                    <IoPersonOutline size={25} />
-                    <span className="ml-3 text-xm tracking-tight">Perfil</span>
+                    <IoPersonOutline size={20} />
+                    <span className="ml-3 font-regular text-xm tracking-tight">Perfil</span>
                 </Link>
 
                 <Link href="/" className="flex items-center mt-1 p-2 m-2 hover:bg-white hover:text-black rounded transition-all">
-                    <IoTicketOutline size={25} />
-                    <span className="ml-3 text-xm tracking-tight">Ordenes</span>
+                    <IoTicketOutline size={20} />
+                    <span className="ml-3 font-regular text-xm tracking-tight">Ordenes</span>
+                </Link>
+
+                <Link href="/auth/indexLogin" className="flex items-center mt-1 p-2 m-2 hover:bg-white hover:text-black rounded transition-all">
+                    <IoLogInOutline size={20} />
+                    <span className="ml-3 font-regular text-xm tracking-tight">Iniciar Sesion</span>
                 </Link>
 
                 <Link href="/" className="flex items-center mt-1 p-2 m-2 hover:bg-white hover:text-black rounded transition-all">
-                    <IoLogInOutline size={25} />
-                    <span className="ml-3 text-xm tracking-tight">Iniciar Sesion</span>
-                </Link>
-
-                <Link href="/" className="flex items-center mt-1 p-2 m-2 hover:bg-white hover:text-black rounded transition-all">
-                    <IoLogOutOutline size={25} />
-                    <span className="ml-3 text-xm tracking-tight">Salir</span>
+                    <IoLogOutOutline size={20} />
+                    <span className="ml-3 font-regular text-xm tracking-tight">Salir</span>
                 </Link>
 
                 {/* linea separadora */}
                 <div className="w-full h-px bg-white my-8"/>
            
                 <Link href="/" className="flex items-center mt-1 p-2 m-2 hover:bg-white hover:text-black rounded transition-all">
-                    <IoDesktopOutline size={25} />
-                    <span className="ml-3 text-xm tracking-tight">Cursos</span>
+                    <IoDesktopOutline size={20} />
+                    <span className="ml-3 font-regular text-xm tracking-tight">Cursos</span>
                 </Link>
 
                 <Link href="/" className="flex items-center mt-1 p-2 m-2 hover:bg-white hover:text-black rounded transition-all">
-                    <IoTicketOutline size={25} />
-                    <span className="ml-3 text-xm tracking-tight">Ordenes</span>
+                    <IoTicketOutline size={20} />
+                    <span className="ml-3 font-regular text-xm tracking-tight">Ordenes</span>
                 </Link>
 
                 <Link href="/" className="flex items-center mt-1 p-2 m-2 hover:bg-white hover:text-black rounded transition-all">
-                    <IoPeopleOutline size={25} />
-                    <span className="ml-3 text-xm tracking-tight">Usuarios</span>
+                    <IoPeopleOutline size={20} />
+                    <span className="ml-3 font-regular text-xm tracking-tight">Usuarios</span>
                 </Link>
             
 

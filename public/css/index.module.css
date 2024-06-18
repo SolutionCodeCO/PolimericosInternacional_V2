@@ -2,6 +2,7 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(26, 33, 48, 1) 100%);
     color: var(--white);
     min-height: 100vh;
+    font-weight: lighter;
 }
 
 .header {
@@ -20,7 +21,7 @@
 }
 
 .logo h2 {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .navegable {
@@ -31,7 +32,7 @@
 }
 
 .navegable .icon {
-    font-size: 30px;
+    font-size: 25px;
     transition: .3s;
 
     &:hover {
@@ -40,7 +41,7 @@
 }
 
 .navegable button {
-    font-size: 20px;
+    font-size: 17px;
     padding: 5px 10px;
     transition: .3s;
     border-radius: 5px;
@@ -49,4 +50,226 @@
     &:hover{
         background-color: rgba(128, 128, 128, 0.171);
     }
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    --stroke: #666;
+    --fill: #ffc73a;
+  }
+  
+  .rating input {
+    appearance: unset;
+  }
+  
+  .rating label {
+    cursor: pointer;
+  }
+  
+  .rating svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+  }
+  
+  @keyframes idle {
+    from {
+      stroke-dashoffset: 24;
+    }
+  }
+  
+  .rating label:hover svg {
+    stroke: var(--fill);
+  }
+  
+  .rating input:checked ~ label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+  
+  @keyframes yippee {
+    0% {
+      transform: scale(1);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+  
+    30% {
+      transform: scale(0);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+  
+    30.1% {
+      stroke: var(--fill);
+      stroke-dasharray: 0;
+      stroke-linejoin: miter;
+      stroke-width: 8px;
+    }
+  
+    60% {
+      transform: scale(1.2);
+      fill: var(--fill);
+    }
+  }
+  
+  /* carrousel de la portada */
+  
+.slider {
+  height: 330px;
+  margin: 80px 0 0 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider_track {
+  display: flex;
+  width: calc(340px * 22);
+  animation: scroll 50s linear infinite;
+  border-radius: 10px;
+}
+
+.slider_track:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(calc(-340px * 20));
+  }
+}
+
+.slide {
+  height: 345px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, #1a2130 0%, #1a213000 100%);
+  content: '';
+  border-radius: 5px;
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: -1px;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.footer_aside {
+  margin: 10px 0;
+  text-align: right;
+  color: var(--white);
+  font-weight: 300;
+}
+
+/* slider de banderas */
+.contenedor_banderas{
+  width: 100%;
+}
+
+.image_creada2 {
+  height: 100px;
+  width: 280px;
+  padding: 0 10px;
+  border-radius: 8px;
+}
+
+.sliderBandera {
+  height: 180px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.slider_track_bandera {
+  display: flex;
+  width: calc(100px * 20);
+  animation: scroll2 10s linear infinite;
+}
+.slider_track_bandera:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes scroll2 {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(calc(-100px * 10));
+  }
+}
+
+.slide2 {
+  height: 180px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sliderBandera::before,
+.sliderBandera::after {
+  background: linear-gradient(to right, #121212 0%, #12121200 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.sliderBandera::before {
+  left: 0;
+  top: 0;
+}
+
+.sliderBandera::after {
+  right: -1px;
+  top: 0;
+  transform: rotateZ(180deg);
 }

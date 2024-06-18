@@ -4,5 +4,5 @@ export const inter = Inter({ subsets: ["latin"] });
 
 export const outfit = Outfit({ 
     subsets:["latin"],
-    weight: ['500', '700'] 
+    weight: ['100','300','500','700'] 
 })

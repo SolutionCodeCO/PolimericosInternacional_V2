@@ -16,8 +16,12 @@ export const TopMenu = () => {
     {/* LOGO */}
     <Link href='/'>
     <div className={styles.logo}>
-    <Image src="/img/logo.png" width={50} height={50} alt="logo" />
-    <h2>Polimericos Internacional</h2>
+    <Image src="/img/logo.png" width={35} height={35} alt="logo" />
+    <div>
+    <h2 className='font-regular'>Polimericos Internacional</h2>
+    <p className='-mt-1'>Equipo especialiado en diferentes áreas</p>
+    </div>
+   
     </div>
     </Link>
     
@@ -34,7 +38,7 @@ export const TopMenu = () => {
             <IoCartOutline />
         </Link>
         
-        <button onClick={() => openSideMenu()}>Menú</button>
+        <button className='font-regular' onClick={() => openSideMenu()}>Menú</button>
     </div>
 </nav>
 

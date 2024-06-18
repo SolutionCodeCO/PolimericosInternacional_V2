@@ -14,12 +14,19 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
-    colors:{
-      'white': '#F3F7EC',
-      'azul':  '#1A2130',
-      'black': '#121212',
-      'gold': '#C7A438'
-    }
+    colors: {
+      white: "#F3F7EC",
+      azul: "#1A2130",
+      black: "#121212",
+      gold: "#C7A438",
+      red: "#D04848",
+      green: "#81A263"
+    },
+    fontWeight: {
+      light: '100',
+      regular: '400',
+      bold: '700',
+    },
   },
   plugins: [],
 };
