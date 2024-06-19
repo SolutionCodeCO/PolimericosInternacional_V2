@@ -12,7 +12,7 @@ const coursesInCart =[
 
 export default function cartAdmin() {
   return (
-    <div className="flex justify-center items-center pt-[5%]  mb-10 px-10 sm:px-0">
+    <div className="flex justify-center items-center pt-24 lg:pt-[5%]  mb-10 px-10 sm:px-0">
       <div className="flex flex-col w-[1000px]">
         <Title title="Verificación de tu compra" />
 
@@ -42,7 +42,7 @@ export default function cartAdmin() {
 
           {/* checkout - resumen de la orden*/}
           
-          <div className="rounded-xl shadow-xl p-7 h-fit">
+          <div className="rounded-xl shadow-xl p-0 lg:p-7 h-fit">
 
            
             <h2 className="text-2xl mb-2 font-bold">Resumen de la compra :)</h2>

@@ -20,19 +20,19 @@ export default function cartAdmin({ params }: Props) {
   }
 
   return (
-    <div className="px-8 pt-[5%]">
+    <div className="px-8 lg:pt-[5%] pt-28">
       <Title title={`Aprendizaje | ${course.title}`} />
-      <div className="flex justify-between h-full bg-azul rounded-xl mt-12">
-        <div className="w-1/2 bg-black">
+      <div className="flex flex-col lg:flex-row lg:justify-between h-full bg-azul rounded-xl mt-12">
+        <div className="lg:w-1/2 w-full h-full bg-black">
           video
         </div>
 
-        <div className="w-1/2 p-7">
+        <div className="lg:w-1/2 w-full p-7">
           {/* titulo */}
           <h2 className='text-3xl mb-3 font-bold'>{course.title}</h2>
 
           {/* estrella | precio */}
-          <div className='flex items-center justify-between mb-5'>
+          <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between mb-5'>
             <div className={styles.rating}>
               <input type="radio" id="star-1" name="star-radio" value="star-1" />
               <label htmlFor="star-1">
@@ -63,7 +63,7 @@ export default function cartAdmin({ params }: Props) {
           <p className='font-light'>{course.description}</p>
 
           {/* duracion | publicacion */}
-          <div className='flex justify-between items-center mt-7'>
+          <div className='flex flex-col gap-3 lg:flex-row lg:justify-between lg:items-center mt-7'>
             {/* duracion */}
             <div>
               <h3 className='text-xl font-regular'>Duración:</h3>

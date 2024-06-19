@@ -26,7 +26,7 @@ export default function cartAdmin({params}:Props) {
 
 
   return (
-    <div className="flex justify-center items-center pt-[5%] mb-20 px-10 sm:px-0">
+    <div className="flex justify-center items-center pt-24 lg:pt-[5%] mb-20 px-10 sm:px-0">
       <div className="flex flex-col w-[1000px]">
         <Title title={`Orden #${id}`} />
 
@@ -68,7 +68,7 @@ export default function cartAdmin({params}:Props) {
 
           {/* checkout - resumen de la orden*/}
           
-          <div className="rounded-xl shadow-xl p-7">
+          <div className="rounded-xl shadow-xl p-0 lg:p-7">
 
            
             <h2 className="text-2xl mb-2 font-bold">Resumen de la compra :)</h2>

@@ -28,8 +28,8 @@ export default function Category({params}: Props) {
   // }
 
     return (
-      <div className="px-8 pt-[5%]">
-      <div className="flex justify-between items-center">
+      <div className="px-8 lg:pt-[5%] pt-20">
+      <div className="flex flex-col justify-center lg:flex-row lg:justify-between items-center">
       <Title title={`Cursos virtuales | ${labels[id]}`} subtitle="Encontraras mas de 100 cursos dinámicos."/>
       <div className="flex">
         <div className="flex items-center gap-1 text-xl p-2 transition-all hover:-translate-y-2">

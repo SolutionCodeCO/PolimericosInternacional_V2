@@ -13,19 +13,19 @@ export const CoursesGridItem = ({course}:Props) => {
   return (
 
     <Link href={`/course/${course.slug}`}>
-    <article key={course.slug} className='fadeIn flex gap-1 items-center bg-azul rounded-xl cursor-pointer hover:-translate-y-2 transition-all hover:bg-white hover:text-black hover:text-regular'>
+    <article key={course.slug} className='fadeIn flex flex-col lg:flex-row gap-1 lg:items-center bg-azul rounded-xl cursor-pointer hover:-translate-y-2 transition-all overflow-hidden hover:bg-white hover:text-black hover:text-regular p-2'>
     <div className='w-1/2 h-auto'>
       <Image
         src={`/img/${course.images[0]}`}
         alt={course.title}
-        className='rounded p-3'
-        width={900}
-        height={100}
+        className='rounded lg:p-3 max-w-[310px] '
+        width={500}
+        height={500}
       >
       </Image>
     </div>
 
-    <div className=''>
+    <div className='p-2'>
 
       <h3 className='text-2xl font-bold '>{course.title}</h3>
       <div className={styles.rating}>

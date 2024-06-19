@@ -8,7 +8,7 @@ interface Props {
 }
 export const CoursesGrid = ({ courses }: Props) => {
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10 mt-10 w-full'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10 mt-0 lg:mt-10 w-full'>
       {
         courses.map(courses => (
          <CoursesGridItem key={courses.slug} course={courses}/>
