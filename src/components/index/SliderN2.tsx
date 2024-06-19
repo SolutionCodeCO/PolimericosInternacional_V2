@@ -28,7 +28,7 @@ const SliderBanderas = () => {
     return (
         <div>
             <div className={styles.contenedor_banderas}>
-                <h3 className='text-center text-[45px] font-bold'>Puntos Internacionales de Aprendizaje</h3>
+                <h3 className='text-center text-[32px] lg:p-0 px-3  lg:text-[45px] font-bold'>Puntos Internacionales de Aprendizaje</h3>
                 <div className={styles.sliderBandera}>
                     <div className={styles.slider_track_bandera}>
                         {banderas.map((src, index) => (

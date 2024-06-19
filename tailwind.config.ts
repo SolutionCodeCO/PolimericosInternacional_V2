@@ -28,6 +28,8 @@ const config: Config = {
       bold: '700',
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-filters'),
+  ],
 };
 export default config;

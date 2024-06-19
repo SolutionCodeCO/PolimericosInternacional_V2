@@ -3,19 +3,18 @@ import Link from "next/link"
 
 export const Footer = () => {
   return (
-  <div className="flex w-full justify-between text-xs mb-10">
+  <div className="flex w-full justify-between text-xs mt-[10%] mb-10">
     <footer className="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 w-full">
   <div className="w-full-xl px-4 py-5 sm:px-6 lg:px-8 flex">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 w-full">
       <div className="flex flex-col justify-center items-center">
       <Image src="/img/logo.png" width={150} height={150} className="mr-5 h-[150px] w-[150px]" alt="logo" />
-        <p className="max-w-xl mt-4 text-sm text-gray-600 font-regular">
+        <p className="max-w-xl mt-4 text-sm text-gray-600 font-regular text-center">
         Somos un grupo de profesionales en diferentes áreas dispuestos para capacitarte en técnicas de personalización de pinturas y decoraciones, con el fin de ayudarte a emprender.
         </p>
-       
       </div>
       
-      <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3 text-center">
         <div>
           <p className="font-bold">
             Empresa

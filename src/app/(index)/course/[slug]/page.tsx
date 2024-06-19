@@ -20,7 +20,7 @@ export default function cartAdmin({ params }: Props) {
   }
 
   return (
-    <div className="px-8">
+    <div className="px-8 pt-[5%]">
       <Title title={`Aprendizaje | ${course.title}`} />
       <div className="flex justify-between h-full bg-azul rounded-xl mt-12">
         <div className="w-1/2 bg-black">

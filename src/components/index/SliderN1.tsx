@@ -36,8 +36,8 @@ const SliderN1 = () => {
     }, []);
 
     return (
-        <aside className={styles.aside}>
-            <div className="text-azul bg-gold text-[22px] absolute p-2 rounded-lg top-0 left-[20%] right-[20%] font-regular text-center">
+        <aside className="">
+            <div className=" text-azul bg-gold text-[22px] absolute p-2 rounded-lg top-0 left-4 lg:left-[11%] right-4 lg:right-[11%] font-regular text-center lg:w-[80%] w-[90%]">
                 <h3>Cursos a nivel Internacional</h3>
             </div>
             <div className={styles.slider}>
@@ -47,9 +47,9 @@ const SliderN1 = () => {
                             <Image
                                 src={src}
                                 alt={`img representativa ${index + 1}`}
-                                width={ 345 }
-                                height={ 345 }
-                                className="rounded-lg"
+                                width={ 340 }
+                                height={ 340 }
+                                className={styles.imagen_creada}
                                 priority // Optimiza la carga de las imágenes en el carrusel
                             />
                         </div>
@@ -57,7 +57,7 @@ const SliderN1 = () => {
                 </div>
             </div>
             <div className="mt-2 text-center lg:text-right font-regular">
-                <span>Te enseñaremos desde cero sin necesidad de costosas maquinas, asesoria permanente y lo mejor de todo serán los descuentos en insumos.</span>
+                <span className='text-xl m-0 lg:text-[16px]'>Te enseñaremos desde cero sin necesidad de costosas maquinas, asesoria permanente y lo mejor de todo serán los descuentos en insumos.</span>
             </div>
         </aside>
     );
