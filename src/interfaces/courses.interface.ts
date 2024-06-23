@@ -1,10 +1,10 @@
 export interface Courses {
-    //todo id: string;
+    id: string;
     title: string;
     description: string;
     images: string[];
     price: number;
-    datePublic: string;
+    datePublic: Date;
     duration: string;
     slug: string;
     filter: Filter;

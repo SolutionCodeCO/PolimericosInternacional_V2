@@ -1,10 +1,14 @@
+import { getPaginationCoursesWithImages } from "@/actions";
 import { CoursesGrid, Title } from "@/components";
-import { initialData } from "@/seed/seet";
 import Link from "next/link";
 import { IoLockClosedOutline, IoLockOpenOutline } from "react-icons/io5";
-const courses = initialData.courses;
 
-export default function CoursesAdmin() {
+
+export default async function CoursesAdmin() {
+
+  const { courses } = await getPaginationCoursesWithImages()
+  console.log("se cargaron: ", courses.length, " cursos");
+   
     return (
      <div className="px-8 pt-20 lg:py-0">
       <div className="flex flex-col justify-center lg:flex-row lg:justify-between items-center pt-[5%]">

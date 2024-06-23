@@ -23,7 +23,7 @@ model Course {
   title       String   @unique
   description String
   price       Float    @default(0)
-  datePulic   DateTime
+  datePublic   DateTime
   duration    String
   slug        String   @unique
   filter      Filter
