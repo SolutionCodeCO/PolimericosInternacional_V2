@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Filter {
+  gratis
+  paga
+}
+
+model Category {
+  id     String   @id @default(uuid())
+  name   String   @unique
+  Course Course[]
+}
+
+model Course {
+  id          String   @id @default(uuid())
+  title       String   @unique
+  description String
+  price       Float    @default(0)
+  datePulic   DateTime
+  duration    String
+  slug        String   @unique
+  filter      Filter
+
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId String
+
+  CourseImage CourseImage[]
+
+  @@index([filter])
+}
+
+model CourseImage {
+  id  Int    @id @default(autoincrement())
+  url String
+
+  course   Course @relation(fields: [courseId], references: [id])
+  courseId String
+}
