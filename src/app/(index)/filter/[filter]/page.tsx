@@ -1,31 +1,49 @@
+export const revalidate = 30; //1 min en el cache
+
 import { getPaginationCoursesWithImages } from "@/actions";
 import { CoursesGrid, Pagination, Title } from "@/components";
+import { Filter } from "@prisma/client";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { IoLockClosedOutline, IoLockOpenOutline } from "react-icons/io5";
 
 
+
 interface Props {
+  params: {
+    filter: string
+  },
   searchParams: {
     page?: string
   }
 }
 
-export default async function CoursesAdmin({ searchParams }: Props) {
+export default async function Category({ params, searchParams }: Props) {
+  const { filter } = params
 
   const page = searchParams.page ? parseInt(searchParams.page) : 1
 
-  const { courses, currentPage, totalPages } = await getPaginationCoursesWithImages({ page })
+  const { courses, currentPage, totalPages } = await getPaginationCoursesWithImages({ page, filter: filter as Filter })
 
   if (courses.length === 0) {
-    redirect('/courses')
+    redirect(`/courses/filter/${filter}`)
   }
   console.log("se cargaron: ", courses.length, " cursos");
 
+
+  const labels: Record<string, string> = {
+    'paga': 'Paga',
+    'gratis': 'Gratis'
+  }
+
+  // if (id === 'gratis'){
+  //   notFound()
+  // }
+
   return (
-     <><div className="px-8 pt-20 lg:py-0">
-      <div className="flex flex-col justify-center lg:flex-row lg:justify-between items-center pt-[5%]">
-        <Title title="Cursos virtuales" subtitle="Encontraras mas de 100 cursos dinámicos." />
+    <div className="px-8 lg:pt-[5%] pt-20">
+      <div className="flex flex-col justify-center lg:flex-row lg:justify-between items-center">
+        <Title title={`Cursos virtuales | ${labels[filter]}`} subtitle="Encontraras mas de 100 cursos dinámicos." />
         <div className="flex">
           <div className="flex items-center gap-1 text-xl p-2 transition-all hover:-translate-y-2">
             <span><IoLockClosedOutline /></span><Link href="/filter/paga" className="font-regular"> Paga </Link>
@@ -38,11 +56,7 @@ export default async function CoursesAdmin({ searchParams }: Props) {
 
       </div>
       <CoursesGrid courses={courses} />
-    </div>
-
       <Pagination totalPages={totalPages} />
-      </>
-
-
-      );
-  }
+    </div>
+  );
+}

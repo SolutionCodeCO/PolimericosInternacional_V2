@@ -59,7 +59,7 @@ export const Sidebar = () => {
                     <input
                         type="text"
                         placeholder="Buscar..."
-                        className="w-full bg-gray-50 rounded pl-10 py-1 pr-10 border-b-4 text-xm border-gray-200 focus:outline-none focus:border-gold text-black"
+                        className="w-full bg-gray-50 rounded pl-10 py-1 pr-10 border-b-4 text-xm border-gray-200 focus:outline-none focus:border-gold text-black outline-none font-bold"
                     />
                 </div>
 

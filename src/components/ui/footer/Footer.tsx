@@ -4,12 +4,12 @@ import Link from "next/link"
 export const Footer = () => {
   return (
   <div className="flex w-full justify-between text-xs mt-[10%] mb-10">
-    <footer className="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 w-full">
+    <footer className="bg-gradient-to-r w-full">
   <div className="w-full-xl px-4 py-5 sm:px-6 lg:px-8 flex">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 w-full">
       <div className="flex flex-col justify-center items-center">
       <Image src="/img/logo.png" width={150} height={150} className="mr-5 h-[150px] w-[150px]" alt="logo" />
-        <p className="max-w-xl mt-4 text-sm text-gray-600 font-regular text-center">
+        <p className="max-w-xl mt-4 text-sm text-white font-regular text-center">
         Somos un grupo de profesionales en diferentes áreas dispuestos para capacitarte en técnicas de personalización de pinturas y decoraciones, con el fin de ayudarte a emprender.
         </p>
       </div>
@@ -19,7 +19,7 @@ export const Footer = () => {
           <p className="font-bold">
             Empresa
           </p>
-          <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-sm text-white">
             <a className="hover:opacity-75" href="/"> About </a>
             <a className="hover:opacity-75" href="/"> Meet the Team </a>
             <a className="hover:opacity-75" href="/"> History </a>
@@ -31,7 +31,7 @@ export const Footer = () => {
           <p className="font-bold">
             Cursos virtuales
           </p>
-          <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-sm text-white">
             <a className="hover:opacity-75" href="/"> Contact </a>
             <a className="hover:opacity-75" href="/"> FAQs </a>
             <a className="hover:opacity-75" href="/"> Live Chat </a>
@@ -41,7 +41,7 @@ export const Footer = () => {
           <p className="font-bold">
             Legal
           </p>
-          <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-sm text-white">
             <a className="hover:opacity-75" href="/"> Privacy Policy </a>
             <a className="hover:opacity-75" href="/"> Terms &amp; Conditions </a>
             <a className="hover:opacity-75" href="/"> Returns Policy </a>
@@ -53,7 +53,7 @@ export const Footer = () => {
     
   </div>
   <div>
-  <div className="flex justify-center my-8 space-x-6 text-gray-600">
+  <div className="flex justify-center my-8 space-x-6 text-white">
           <a className="hover:opacity-75" href="https://web.facebook.com/POLIMERICOSINTERNACIONAL" target="_blank" rel="noreferrer">
             <span className="sr-only"> Facebook </span>
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -81,7 +81,7 @@ export const Footer = () => {
 
           </a>
         </div>
-  <p className="mt-3 text-xs text-gray-800 text-center font-regular">
+  <p className="mt-3 text-xs text-white text-center font-regular">
       SolutionCode © {new Date().getFullYear()} Polimericos Dial de Colombia
     </p>
   </div>

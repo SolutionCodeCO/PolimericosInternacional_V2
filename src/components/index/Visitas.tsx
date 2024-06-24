@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export const Visitas = () => {
@@ -10,93 +11,93 @@ export const Visitas = () => {
             <h4 className='font-bold text-[40px]'>¡Nuestras visitas por Latinoamerica!</h4>
           </div>
           <div>
-            <img
+            <Link
               className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s1.webp"
-              alt=""
+              href="/img/lugares/s1.webp"
+              
             />
           </div>
           <div>
-            <img
+            <Link
               className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s2.webp"
-              alt=""
+              href="/img/lugares/s2.webp"
+              
             />
           </div>
           <div>
-            <img
+            <Link
               className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s3.webp"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s4.webp"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s5.webp"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s6.webp"
-              alt=""
+              href="/img/lugares/s3.webp"
+              
             />
           </div>
         </div>
         <div className="grid gap-4">
           <div>
-            <img
+            <Link
               className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s7.webp"
-              alt=""
+              href="/img/lugares/s4.webp"
+              
             />
           </div>
           <div>
-            <img
+            <Link
               className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s8.webp"
-              alt=""
+              href="/img/lugares/s5.webp"
+              
             />
           </div>
           <div>
-            <img
+            <Link
               className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s9.webp"
-              alt=""
+              href="/img/lugares/s6.webp"
+              
             />
           </div>
         </div>
         <div className="grid gap-4">
           <div>
-            <img
+            <Link
               className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s10.webp"
-              alt=""
+              href="/img/lugares/s7.webp"
+              
             />
           </div>
           <div>
-            <img
+            <Link
               className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s11.webp"
-              alt=""
+              href="/img/lugares/s8.webp"
+              
             />
           </div>
           <div>
-            <img
+            <Link
               className="h-auto max-w-full rounded-lg"
-              src="/img/lugares/s12.webp"
-              alt=""
+              href="/img/lugares/s9.webp"
+              
+            />
+          </div>
+        </div>
+        <div className="grid gap-4">
+          <div>
+            <Link
+              className="h-auto max-w-full rounded-lg"
+              href="/img/lugares/s10.webp"
+              
+            />
+          </div>
+          <div>
+            <Link
+              className="h-auto max-w-full rounded-lg"
+              href="/img/lugares/s11.webp"
+              
+            />
+          </div>
+          <div>
+            <Link
+              className="h-auto max-w-full rounded-lg"
+              href="/img/lugares/s12.webp"
+              
             />
           </div>
         </div>

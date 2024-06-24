@@ -36,10 +36,10 @@ export default function cartAdmin({params}:Props) {
           <div className="flex flex-col mt-5">
            <div className={
             clsx(
-              "flex items-center rounded-lg py-2 px-3.5 text-xs font-bold mb-5",
+              "flex items-center rounded-lg py-2 px-3.5 text-xs font-bold mb-5 text-azul",
               {
-                'bg-red':false,
-                'bg-green':true,
+                'bg-[#D04848]':false,
+                'bg-[#81A263]':true,
               }
             )
            }>
@@ -93,16 +93,16 @@ export default function cartAdmin({params}:Props) {
             <div>
             <div className={
             clsx(
-              "flex items-center rounded-lg py-2 px-3.5 text-xs font-bold mb-5",
+              "flex items-center rounded-lg py-2 px-3.5 text-xs font-bold mb-5  text-azul",
               {
-                'bg-red':false,
-                'bg-green':true,
+                'bg-[#D04848]':false,
+                'bg-[#81A263]':true,
               }
             )
            }>
             <IoCardOutline size={30}/>
             {/* <span className="ml-2 text-sm font-regular">Pendiente de pago :0</span> */}
-            <span className="ml-2 text-sm font-regular">Orden pagada :)</span>
+            <span className="ml-2 text-sm font-bold">Orden pagada :)</span>
 
            </div>
               
