@@ -59,7 +59,7 @@ export const Pagination = ({ totalPages }: Props) => {
                                         className={
                                             clsx(" text-white font-regular page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none transition-all duration-300 rounde hover:bg-gold focus:shadow-none rounded",
                                                 {
-                                                    'bg-[#C7A438] rounded-sm': page === currentPage
+                                                    'bg-yellow-500': page === currentPage
                                                 }
                                             )
                                         }

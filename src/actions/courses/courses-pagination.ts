@@ -1,3 +1,5 @@
+// ./courses/courses-pagination.ts
+
 "use server";
 
 import prisma from "@/lib/prisma";
@@ -6,7 +8,7 @@ import { Filter } from "@prisma/client";
 interface PaginationOptions {
   page?: number;
   take?: number;
-  filter? : Filter;
+  filter?: Filter;
 }
 
 export const getPaginationCoursesWithImages = async ({
@@ -18,7 +20,6 @@ export const getPaginationCoursesWithImages = async ({
   if (page < 1) page = 1;
 
   try {
-
     // 1. get courses
     const courses = await prisma.course.findMany({
       take: take,
@@ -36,15 +37,13 @@ export const getPaginationCoursesWithImages = async ({
       },
     });
 
-    // 2. get totally pages
-    // todo: 
+    // 2. get total pages
     const totalCount = await prisma.course.count({
       where:{
         filter: filter
       }
-    })
-    const totalPages = Math.ceil (totalCount / take)
-
+    });
+    const totalPages = Math.ceil(totalCount / take);
 
     return {
       currentPage: page,

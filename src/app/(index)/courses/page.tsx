@@ -23,7 +23,7 @@ export default async function CoursesAdmin({ searchParams }: Props) {
   console.log("se cargaron: ", courses.length, " cursos");
 
   return (
-     <><div className="px-8 pt-20 lg:py-0">
+    <><div className="px-8 pt-20 lg:py-0">
       <div className="flex flex-col justify-center lg:flex-row lg:justify-between items-center pt-[5%]">
         <Title title="Cursos virtuales" subtitle="Encontraras mas de 100 cursos dinámicos." />
         <div className="flex">
@@ -41,8 +41,8 @@ export default async function CoursesAdmin({ searchParams }: Props) {
     </div>
 
       <Pagination totalPages={totalPages} />
-      </>
+    </>
 
 
-      );
-  }
+  );
+}
