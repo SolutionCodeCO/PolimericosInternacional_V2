@@ -3,6 +3,15 @@ import { initialData } from "@/seed/seet";
 import Link from "next/link";
 import Image from "next/image"
 import { IoCartOutline } from "react-icons/io5";
+import { Metadata } from "next";
+
+export const metadata: Metadata ={
+  title: {
+    template: '%s | Store',
+    default: 'Verifica tu orden'
+  },
+  description: "Polimericos Dial de Colombia es una compañia de servicios internacionales donde encontraras infinidades de cursos sobre tecnicas de pintado y mucho mas..."
+}
 
 const coursesInCart =[
   initialData.courses[0],

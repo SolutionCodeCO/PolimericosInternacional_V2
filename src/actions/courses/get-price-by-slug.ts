@@ -3,12 +3,12 @@
 'use server'
 
 import prisma from "@/lib/prisma"
-import { sleep } from "@/utils/sleep";
+// import { sleep } from "@/utils/sleep";
 
 export const getPriceBySlug = async (slug: string): Promise<number> => {
   try {
 
-    await sleep(1.5)
+    // await sleep(1.5)
 
     const price = await prisma.course.findFirst({
       where: { slug },

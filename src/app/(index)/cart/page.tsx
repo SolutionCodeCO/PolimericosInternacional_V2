@@ -1,15 +1,18 @@
 import { Title } from "@/components";
-import { initialData } from "@/seed/seet";
 import Link from "next/link";
-import Image from "next/image"
 import { IoCartOutline } from "react-icons/io5";
-import { redirect } from "next/navigation";
+import { Metadata } from "next";
+import { CoursesInCart } from "./ui/CoursesInCart";
+import { OrderSumary } from "./ui/OrderSumary";
 
-const coursesInCart =[
-  initialData.courses[0],
-  initialData.courses[1],
-  initialData.courses[2],
-]
+export const metadata: Metadata ={
+  title: {
+    template: '%s | Store',
+    default: 'Carrito'
+  },
+  description: "Polimericos Dial de Colombia es una compañia de servicios internacionales donde encontraras infinidades de cursos sobre tecnicas de pintado y mucho mas..."
+}
+
 
 export default function cartAdmin() {
   // redirect('/empty')
@@ -29,18 +32,7 @@ export default function cartAdmin() {
           
 
           {/* items */}
-          {
-            coursesInCart.map( courses =>(
-              <div key={courses.slug} className="flex mb-5">
-                <Image src={`/img/${courses.images[0]}`} alt={`${courses.title}`} width={100} height={100} className="rounded mr-4"/>
-                <div>
-                  <p className="text-xl font-bold">{courses.title}</p>
-                  <p className="font-regular">$ {courses.price}</p>
-                  <button className="underline mt-3">Remover</button>
-                </div>
-              </div>
-            ))
-          }
+         <CoursesInCart />
           </div>
 
 
@@ -48,20 +40,7 @@ export default function cartAdmin() {
           <div className=" rounded-xl shadow-xl p-0 lg:p-7 h-fit">
             <h2 className="text-2xl mb-2 font-bold">Resumen de la compra :)</h2>
 
-            <div className="grid grid-cols-2">
-              <span className="font-regular">Cantidad de cursos:</span>
-              <span className="text-right font-regular">1 curso</span>
-
-              <span className="font-regular">Subtotal</span>
-              <span className="text-right font-regular">$ 12000</span>
-
-              <span className="font-regular">Impuesto (5%)</span>
-              <span className="text-right font-regular">$ 600</span>
-
-              <span className="text-2xl mt-5 font-regular">Total</span>
-              <span className="text-right text-2xl mt-5 font-regular">$ 12600</span>
-
-            </div>
+           <OrderSumary />
 
             <div>
               <Link href="/checkout">

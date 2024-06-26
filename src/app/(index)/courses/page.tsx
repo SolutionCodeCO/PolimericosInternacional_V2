@@ -1,5 +1,6 @@
-import { getPaginationCoursesWithImages } from "@/actions";
+import { getCourseBySlug, getPaginationCoursesWithImages } from "@/actions";
 import { CoursesGrid, Pagination, Title } from "@/components";
+import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { IoLockClosedOutline, IoLockOpenOutline } from "react-icons/io5";
@@ -9,7 +10,19 @@ interface Props {
   searchParams: {
     page?: string
   }
+  params:{
+    slug: string
+  }
 }
+
+export const metadata: Metadata ={
+  title: {
+    template: '%s | Store',
+    default: 'Cursos Virtuales'
+  },
+  description: "Polimericos Dial de Colombia es una compañia de servicios internacionales donde encontraras infinidades de cursos sobre tecnicas de pintado y mucho mas..."
+}
+
 
 export default async function CoursesAdmin({ searchParams }: Props) {
 

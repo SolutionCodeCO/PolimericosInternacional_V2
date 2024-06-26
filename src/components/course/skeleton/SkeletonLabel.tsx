@@ -1,6 +1,7 @@
 'use client'
 
 import { getPriceBySlug } from "@/actions"
+import { formatMoney } from "@/utils"
 import { useEffect, useState } from "react"
 
 interface Props {
@@ -31,7 +32,7 @@ export const SkeletonLabel = ({ slug }: Props) => {
                     </div>
                 ) : (
                     <div className='flex flex-col lg:flex-row lg:items-center lg:justify-end mb-5'>
-                        <p className='text-2xl font-regular'>$ {price} COP</p>
+                        <p className='text-2xl font-regular'>{formatMoney (price)}</p>
                     </div>
                 )
             }

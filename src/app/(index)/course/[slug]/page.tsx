@@ -2,12 +2,37 @@ export const revalidate = 604800 // revaalicacion cada 7 dias
 
 import { getCourseBySlug } from '@/actions';
 import { SkeletonLabel, Title } from "@/components";
+import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from "next/navigation";
-import { IoCartOutline } from 'react-icons/io5';
+import { AddToCart } from '../ui/addToCart';
 
 interface Props {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const slug = params.slug
+ 
+  // fetch data
+  const course = await getCourseBySlug(slug)
+ 
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || []
+ 
+  return {
+    title: course?.title ?? 'Curso no encontrado',
+    description: course?.description ?? '',
+    openGraph: {
+      title: course?.title ?? 'Curso no encontrado',
+      description: course?.description ?? '',
+      images: [`/course/${course?.images[1]}`],
+    },
   }
 }
 
@@ -44,15 +69,7 @@ export default async function cartAdmin({ params }: Props) {
               <p className='text-sm'>{formattedDatePublic}</p>
             </div>
           </div>
-          <button
-            className="relative cursor-pointer opacity-90 hover:opacity-100 transition-opacity p-[2px] bg-black rounded bg-gradient-to-t from-[#e2c15c] to-[#daa520] active:scale-95 mt-5 w-full"
-          >
-            <span
-              className="font-regular w-full h-full flex items-center justify-center gap-2 px-8 py-3 bg-[#B931FC] text-white rounded bg-gradient-to-l from-[#e2c15c] to-[#daa520]"
-            >
-              <IoCartOutline className='text-2xl' />Añadir al carrito
-            </span>
-          </button>
+          <AddToCart course={course}/>
         </div>
       </div>
     </div>

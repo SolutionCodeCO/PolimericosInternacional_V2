@@ -3,11 +3,18 @@ export const revalidate = 30; //1 min en el cache
 import { getPaginationCoursesWithImages } from "@/actions";
 import { CoursesGrid, Pagination, Title } from "@/components";
 import { Filter } from "@prisma/client";
+import { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { IoLockClosedOutline, IoLockOpenOutline } from "react-icons/io5";
 
-
+export const metadata: Metadata ={
+  title: {
+    template: '%s | Store',
+    default: 'Filtros'
+  },
+  description: "Polimericos Dial de Colombia es una compañia de servicios internacionales donde encontraras infinidades de cursos sobre tecnicas de pintado y mucho mas..."
+}
 
 interface Props {
   params: {

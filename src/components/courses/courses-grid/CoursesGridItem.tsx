@@ -3,6 +3,7 @@ import React from 'react'
 import styles from '../../../../public/css/index.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
+import { formatMoney } from '@/utils';
 
 
 interface Props{
@@ -32,7 +33,7 @@ export const CoursesGridItem = ({course}:Props) => {
       <div className="max-w-sm overflow-hidden py-5">
         <p className="text-base line-clamp-3 font-regular">{course.description}</p>
       </div>
-      <p className='text-2xl font-regular'>${course.price} COP</p>
+      <p className='text-2xl font-regular'>{formatMoney (course.price)}</p>
 
 
     </div>

@@ -11,4 +11,12 @@ export interface Courses {
 
 }
 
+export interface CartCourse{
+    id: string,
+    slus: string,
+    title: string,
+    price: number,
+    image: string    
+}
+
 export type Filter = 'gratis'|'paga'
